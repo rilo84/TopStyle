@@ -10,6 +10,10 @@ const orderSchema = new mongoose.Schema({
     required: true
   },
   items: [
+    {
+      type: Object,
+      required: true
+    }
   ],
   total: {
     type: Number,
