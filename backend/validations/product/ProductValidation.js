@@ -5,6 +5,7 @@ const productValidation = (bodyData) =>{
         name: Joi.string().min(2).required(),
         category: Joi.string().min(2).max(50).required(),
         description: Joi.string().max(300).required(),
+        size: Joi.string().min(1).required(),
         price: Joi.number().min(0).required(),
         imagelink: Joi.string().required(),
     });

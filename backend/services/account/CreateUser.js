@@ -5,7 +5,7 @@ const registerValidation = require('../../validations/user/RegisterValidation');
 const CreateUser = async (req, res) => {
 
   //Check if user exist
-  const userExist = await User.findOne({ userName: req.body.userName });
+  const userExist = await User.findOne({ userName: req.body.username });
   if (userExist) return res.status(400).send("User already exist");
 
   const { error } = registerValidation(req.body);

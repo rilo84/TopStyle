@@ -3,6 +3,9 @@ const productValidation = require('../../validations/product/ProductValidation')
 
 const CreateProduct = async (req, res) => {
 
+  //Authorize
+  if(req.user._id != process.env.Admin) return res.status(401).send("Användaren har inga admin-rättigheter");
+
   //Validate
   const { error } = productValidation(req.body);
   if (error) return res.status(400).send(error.details[0].message);
@@ -12,6 +15,7 @@ const CreateProduct = async (req, res) => {
     name: req.body.name,
     category: req.body.category,
     description: req.body.description,
+    size: req.body.size,
     price: req.body.price,
     imagelink: req.body.imagelink
   });
