@@ -5,10 +5,13 @@ import cartImg from '../images/cart.svg';
 const navbar = () => {
     return (
         <nav>
-            <ul>
+            <ul className="leftContent">
                 <li>Kläder</li>
                 <li>Skor</li>
-                <li>Varukorg <img src={cartImg} alt="cart" /></li>
+            </ul>
+            <ul className="rightContent">
+                <li className="rightItems">Varukorg <img src={cartImg} alt="cart" /></li>
+                <li className="rightItems">Login</li>
             </ul>
         </nav>
     );

@@ -12,30 +12,84 @@ nav {
   height: 5rem;
 }
 
-nav ul {
-  width: 100%;
+nav .leftContent {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
 }
 
-nav ul li {
+nav .leftContent li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 0px;
   cursor: pointer;
+  border-radius: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(255, 153, 85, 0);
+  font-size: 1.2rem;
 }
 
-nav ul img {
+nav .leftContent li:hover {
+  -webkit-box-shadow: 0px 0px 100px 30px #FF9955;
+          box-shadow: 0px 0px 100px 30px #FF9955;
+}
+
+nav .rightContent {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+nav .rightContent li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 0px;
+  margin-right: 20%;
+  cursor: pointer;
+  border-radius: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(255, 153, 85, 0);
+  font-size: 1.2rem;
+}
+
+nav .rightContent li:hover {
+  -webkit-box-shadow: 0px 0px 100px 30px #FF9955;
+          box-shadow: 0px 0px 100px 30px #FF9955;
+}
+
+nav .rightContent img {
   cursor: pointer;
   width: 2rem;
 }
