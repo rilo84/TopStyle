@@ -3,7 +3,7 @@ import '../styles/navbar.css';
 import cartImg from '../images/cart.svg';
 import {NavLink} from 'react-router-dom';
 
-const navbar = () => {
+const Navbar = () => {
     return (
         <nav>
             <ul className="leftContent">
@@ -18,4 +18,4 @@ const navbar = () => {
     );
 }
 
-export default navbar;
+export default Navbar;

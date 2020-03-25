@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useContext } from "react";
+import { CartContext } from "../contexts/CartContext";
 
-const cart = () => {
+const Cart = () => {
+  const { cart } = useContext(CartContext);
+
+  const products = cart.map(p => {
     return (
-        <div>
-            <h1>Cart</h1>
-        </div>
+      <>
+        <p>{p.name}</p>
+        <p>{p.amount}</p>
+      </>
     );
-}
+  });
+  return (
+    <div>
+      <h1>Cart</h1>
+      <p>Du har {cart.length} i din varukorg</p>
+      {products}
+    </div>
+  );
+};
 
-export default cart;
+export default Cart;

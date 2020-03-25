@@ -3,7 +3,7 @@ import '../styles/home.css';
 import ClothesImg from '../images/clothes.png';
 import ShoesImg from '../images/shoes.png';
 
-const home = () => {
+const Home = () => {
     return (
         <section className="home">
             <div className="card">
@@ -18,4 +18,4 @@ const home = () => {
     );
 }
 
-export default home;
+export default Home;

@@ -3,7 +3,7 @@ import logoImg from '../images/logo.svg';
 import {NavLink} from 'react-router-dom';
 import '../styles/header.css';
 
-const header = () => {
+const Header = () => {
     return (
         <header>
             <NavLink to="/"><img src={logoImg} alt="logo" /></NavLink>
@@ -11,4 +11,4 @@ const header = () => {
     );
 }
 
-export default header;
+export default Header;

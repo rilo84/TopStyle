@@ -1,10 +1,10 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import Home from './home';
-import Cart from './cart';
-import Clothes from './clothes';
+import Home from './Home';
+import Cart from './Cart';
+import Clothes from './Clothes';
 
-const main = () => {
+const Main = () => {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
@@ -14,4 +14,4 @@ const main = () => {
   );
 };
 
-export default main;
+export default Main;

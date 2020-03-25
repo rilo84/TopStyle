@@ -2,7 +2,7 @@ import React from 'react';
 import EHandLogo from '../images/ehandlogo.png';
 import '../styles/footer.css';
 
-const footer = () => {
+const Footer = () => {
     return (
         <footer>
             <img src={EHandLogo} alt="ehandel"/>
@@ -17,4 +17,4 @@ const footer = () => {
     );
 }
 
-export default footer;
+export default Footer;
