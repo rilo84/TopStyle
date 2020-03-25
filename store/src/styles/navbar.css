@@ -50,6 +50,14 @@ nav .leftContent li:hover {
           box-shadow: 0px 0px 100px 30px #FF9955;
 }
 
+nav .leftContent li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: black;
+}
+
 nav .rightContent {
   width: 50%;
   display: -webkit-box;
@@ -87,6 +95,14 @@ nav .rightContent li {
 nav .rightContent li:hover {
   -webkit-box-shadow: 0px 0px 100px 30px #FF9955;
           box-shadow: 0px 0px 100px 30px #FF9955;
+}
+
+nav .rightContent li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: black;
 }
 
 nav .rightContent img {

@@ -1,0 +1,13 @@
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:40vh;
+    background-color: black;
+    color:#FF9955;
+    .company{
+        p{
+            margin:0.2rem;
+        }
+    }
+}

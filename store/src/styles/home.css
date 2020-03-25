@@ -1,0 +1,40 @@
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  min-height: 80vh;
+}
+
+.home .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid black;
+  margin: 3rem;
+  padding: 1rem;
+  -webkit-box-shadow: 10px 10px 10px 5px grey;
+          box-shadow: 10px 10px 10px 5px grey;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.home .card:hover {
+  -webkit-box-shadow: 10px 10px 10px 10px grey;
+          box-shadow: 10px 10px 10px 10px grey;
+}
+/*# sourceMappingURL=home.css.map */

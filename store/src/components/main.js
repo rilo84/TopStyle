@@ -1,11 +1,16 @@
 import React from "react";
-import "../styles/main.css";
+import { Switch, Route } from "react-router-dom";
+import Home from './home';
+import Cart from './cart';
+import Clothes from './clothes';
 
 const main = () => {
   return (
-    <section className="main">
-      <div className="mainBox"></div>
-    </section>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/cart" component={Cart} />
+      <Route path="/clothes" component={Clothes} />
+    </Switch>
   );
 };
 
