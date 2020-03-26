@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
+import '../styles/cart.css';
 
 const Cart = () => {
   const { cart, createOrder } = useContext(CartContext);
@@ -7,16 +8,14 @@ const Cart = () => {
   const products = cart.map(p => {
     return (
       <>
-        <p>{p.name}</p>
-        <p>{p.amount}</p>
+        <p>{p.amount} st {p.name} {p.price*p.amount} kr</p>
       </>
     );
   });
 
   return (
-    <div>
-      <h1>Cart</h1>
-      <p>Du har {cart.length} produkter i din varukorg</p>
+    <div className="cartContainer">
+      <h3>Din varukorg</h3>
       {products}
       <div>
         <button onClick={createOrder}>Betala</button>
