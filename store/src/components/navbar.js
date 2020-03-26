@@ -12,7 +12,8 @@ const Navbar = () => {
             </ul>
             <ul className="rightContent">
                 <li className="rightItems"><NavLink to="/cart">Varukorg <img src={cartImg} alt="cart" /></NavLink></li>
-                <li className="rightItems">Login</li>
+                <li className="rightItems"><NavLink to="/login">Login</NavLink></li>
+                <li className="rightItems"><NavLink to="/register">Register</NavLink></li>
             </ul>
         </nav>
     );

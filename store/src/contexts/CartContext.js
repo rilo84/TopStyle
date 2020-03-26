@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+import CreateOrder from '../repo/CreateOrder';
 
 export const CartContext = createContext();
 
@@ -19,8 +20,13 @@ const CartContextProvider = props => {
       });
     }
   };
+
+  const createOrder = () =>{
+    CreateOrder(cart);
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addProduct }}>
+    <CartContext.Provider value={{ cart, addProduct, createOrder }}>
       {props.children}
     </CartContext.Provider>
   );
