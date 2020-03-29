@@ -5,7 +5,7 @@ import "../styles/clothes.css";
 const Shoes = () => {
   const { shoes } = useContext(ProductContext);
 
-  let shoesData = shoes.map(c => {
+  const shoesData = shoes.map(c => {
     return (
       <a href={`shoes/${c._id}`} className="productCard" key={c._id}>
         <h3>{c.name}</h3>

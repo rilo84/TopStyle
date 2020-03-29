@@ -16,27 +16,33 @@ const CartContextProvider = props => {
  
   const addProduct = product => {
     const productExist = cart.filter(p => p._id === product._id);
- 
+
     if (productExist.length === 0) {
       product.amount = 1;
-      setCart([...cart, product]);
+      let newCart = [...cart,product];
+      setCart(newCart);
+      localStorage.setItem('cart', JSON.stringify(newCart));
     } else {
       cart.forEach(p => {
         if (p._id === product._id) {
           p.amount += 1;
+          localStorage.setItem('cart', JSON.stringify(cart));
         }
       });
     }
-    
-    localStorage.setItem('cart',JSON.stringify(cart));
   };
+
+  const clearCart = () => {
+    localStorage.clear('cart');
+    setCart([]);
+  }
 
   const createOrder = () =>{
     CreateOrder(cart);
   };
 
   return (
-    <CartContext.Provider value={{ cart, addProduct, createOrder }}>
+    <CartContext.Provider value={{ cart, addProduct, createOrder, clearCart }}>
       {props.children}
     </CartContext.Provider>
   );

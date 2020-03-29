@@ -8,6 +8,7 @@ const ProductContextProvider = props => {
 
   const [shoes, setShoes] = useState([]);
   const [clothes, setClothes] = useState([]);
+  const [currProduct,setCurrProduct] = useState([]);
 
   useEffect(() => {
     (async () => {
@@ -18,14 +19,14 @@ const ProductContextProvider = props => {
     })();
   }, []);
 
-  const getProduct = async (id) =>{
+  const setProduct = async (id) =>{
     let product = await GetProduct(id);
-    return product;
+    setCurrProduct([product]);
   }
 
 
   return (
-    <ProductContext.Provider value={{shoes, clothes, getProduct}}>
+    <ProductContext.Provider value={{shoes, clothes, currProduct, setProduct}}>
       {props.children}
     </ProductContext.Provider>
   );
