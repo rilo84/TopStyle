@@ -2,44 +2,62 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .clothesContainer .productCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 20%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: orange;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  background-color: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 15rem;
   margin: 2rem;
-  border-radius: 5px;
+  border: 2px solid black;
+  -webkit-box-shadow: 10px 10px 10px 5px grey;
+          box-shadow: 10px 10px 10px 5px grey;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .clothesContainer .productCard img {
-  height: 10rem;
   margin: 1rem;
   width: 90%;
   border-radius: 10px;
 }
 
+.clothesContainer .productCard p {
+  font-size: 1.2rem;
+}
+
 .clothesContainer .productCard button {
-  background: blue;
-  border: none;
+  background: white;
+  border: 2px solid black;
   width: 10rem;
   height: 3rem;
   margin: 1rem;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.clothesContainer .productCard:hover {
+  -webkit-box-shadow: 10px 10px 10px 10px grey;
+          box-shadow: 10px 10px 10px 10px grey;
 }
 /*# sourceMappingURL=clothes.css.map */

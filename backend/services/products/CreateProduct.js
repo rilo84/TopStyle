@@ -15,7 +15,6 @@ const CreateProduct = async (req, res) => {
     name: req.body.name,
     category: req.body.category,
     description: req.body.description,
-    size: req.body.size,
     price: req.body.price,
     imagelink: req.body.imagelink
   });

@@ -2,17 +2,19 @@ import React, { useState, useEffect, useContext } from "react";
 import GetData from "../repo/GetData";
 import GetProduct from "../repo/GetProduct";
 import { CartContext } from "../contexts/CartContext";
+import { ProductContext } from "../contexts/ProductContext";
 import '../styles/clothes.css';
 
 const Clothes = () => {
   const [clothesData, setClothesData] = useState([]);
 
   const { addProduct } = useContext(CartContext);
+  const { getClothes } = useContext(ProductContext);
+
 
   useEffect(() => {
     const fetch = async () => {
-      let data = await GetData();
-      console.log(data);
+      let data = await getClothes();
       setClothesData(data);
     };
     fetch();

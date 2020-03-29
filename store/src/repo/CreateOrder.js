@@ -1,6 +1,6 @@
 const CreateOrder = (cart) => {
   let uri = "http://localhost:3001/api/orders/create";
-  let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc5MTVlODI1ZmM3NzBjNDQxNDUxYTMiLCJpYXQiOjE1ODUyMjk5NDF9.IQ8JAc24BpPAXP9QzCrNwF_rSqlgwBhrCAf2RMFUTRc";
+  let token = localStorage.getItem('token');
   
   let total = 0;
   cart.forEach(p => {
