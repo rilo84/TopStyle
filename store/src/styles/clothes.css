@@ -10,6 +10,8 @@
 }
 
 .clothesContainer .productCard {
+  text-decoration: none;
+  color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

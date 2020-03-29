@@ -1,32 +1,19 @@
-import React, { useState, useEffect, useContext } from "react";
-import GetData from "../repo/GetData";
-import GetProduct from "../repo/GetProduct";
+import React, { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 import { ProductContext } from "../contexts/ProductContext";
 import '../styles/clothes.css';
 
 const Clothes = () => {
-  const [clothesData, setClothesData] = useState([]);
-
   const { addProduct } = useContext(CartContext);
-  const { getClothes } = useContext(ProductContext);
-
-
-  useEffect(() => {
-    const fetch = async () => {
-      let data = await getClothes();
-      setClothesData(data);
-    };
-    fetch();
-  }, []);
+  const { clothes, getProduct } = useContext(ProductContext);
 
   const handleProduct = async e => {
-    let product = await GetProduct(e.target.value);
+    let product = await getProduct(e.target.value);
     console.log(product);
     addProduct(product);
   };
 
-  let clothes = clothesData.map(c => {
+  const clothesData = clothes.map(c => {
     return (
         <div className="productCard" key={c._id}>
           <h3>{c.name}</h3>
@@ -38,11 +25,10 @@ const Clothes = () => {
         </div>
     );
   });
-  console.log(clothes);
 
   return (
     <section className="clothesContainer">
-    {clothes}
+    {clothesData}
     </section>
   )
   
