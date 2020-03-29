@@ -41,7 +41,7 @@
 .clothesContainer .productCard img {
   margin: 1rem;
   width: 90%;
-  border-radius: 10px;
+  max-height: 20rem;
 }
 
 .clothesContainer .productCard p {

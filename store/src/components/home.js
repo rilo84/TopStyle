@@ -6,14 +6,14 @@ import ShoesImg from '../images/shoes.png';
 const Home = () => {
     return (
         <section className="home">
-            <div className="card">
+            <a href="/clothes" className="card">
                 <img src={ClothesImg} alt="Clothes" />
                 <h3>Shoppa kläder</h3>
-            </div>
-            <div className="card">
+            </a>
+            <a href="/shoes" className="card">
                 <img src={ShoesImg} alt="Shoes" />
                 <h3>Shoppa skor</h3>
-            </div>
+            </a>
         </section>
     );
 }
