@@ -32,6 +32,37 @@ const CartContextProvider = props => {
     }
   };
 
+  const incrementProduct = (id) =>{
+    let currCart = [...cart];
+    currCart.forEach(p => {
+      if(p._id === id) p.amount += 1;
+    });
+    setCart(currCart);
+    localStorage.setItem('cart', JSON.stringify(currCart));
+  }
+
+  const decrementProduct = (id) =>{
+    let currCart = [...cart];
+    currCart.forEach(p => {
+      if(p._id === id && p.amount > 1){
+        p.amount -= 1;
+        setCart(currCart);
+        localStorage.setItem('cart', JSON.stringify(currCart));
+      }
+      else{
+        let filterCart = currCart.filter(p=> p._id !== id);
+        setCart(filterCart);
+        localStorage.setItem('cart', JSON.stringify(filterCart));
+      }
+    });
+  }
+
+  const getCartTotal = () =>{
+    let total =0;
+    cart.forEach(p => total += (p.amount * p.price));
+    return total;
+  }
+
   const clearCart = () => {
     localStorage.clear('cart');
     setCart([]);
@@ -42,7 +73,7 @@ const CartContextProvider = props => {
   };
 
   return (
-    <CartContext.Provider value={{ cart, addProduct, createOrder, clearCart }}>
+    <CartContext.Provider value={{ cart, addProduct, createOrder, clearCart, incrementProduct, decrementProduct, getCartTotal }}>
       {props.children}
     </CartContext.Provider>
   );
