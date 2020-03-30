@@ -1,79 +1,89 @@
 import React, { createContext, useState, useEffect } from "react";
-import CreateOrder from '../repo/CreateOrder';
+import CreateOrder from "../repo/CreateOrder";
 
 export const CartContext = createContext();
 
 const CartContextProvider = props => {
-
   const [cart, setCart] = useState([]);
 
-  useEffect(()=>{
-    const storedCart = JSON.parse(localStorage.getItem('cart')); 
-    if(storedCart){
+  useEffect(() => {
+    const storedCart = JSON.parse(localStorage.getItem("cart"));
+    if (storedCart) {
       setCart(storedCart);
     }
-  },[]);
- 
+  }, []);
+
   const addProduct = product => {
     const productExist = cart.filter(p => p._id === product._id);
 
     if (productExist.length === 0) {
       product.amount = 1;
-      let newCart = [...cart,product];
+      let newCart = [...cart, product];
       setCart(newCart);
-      localStorage.setItem('cart', JSON.stringify(newCart));
+      localStorage.setItem("cart", JSON.stringify(newCart));
     } else {
-      cart.forEach(p => {
-        if (p._id === product._id) {
-          p.amount += 1;
-          localStorage.setItem('cart', JSON.stringify(cart));
-        }
-      });
+      incrementProduct(product._id);
     }
   };
 
-  const incrementProduct = (id) =>{
+  const incrementProduct = id => {
     let currCart = [...cart];
     currCart.forEach(p => {
-      if(p._id === id) p.amount += 1;
+      if (p._id === id) p.amount += 1;
     });
     setCart(currCart);
-    localStorage.setItem('cart', JSON.stringify(currCart));
-  }
+    localStorage.setItem("cart", JSON.stringify(currCart));
+  };
 
-  const decrementProduct = (id) =>{
+  const decrementProduct = id => {
     let currCart = [...cart];
     currCart.forEach(p => {
-      if(p._id === id && p.amount > 1){
+      if (p._id === id && p.amount > 1) {
         p.amount -= 1;
         setCart(currCart);
-        localStorage.setItem('cart', JSON.stringify(currCart));
-      }
-      else{
-        let filterCart = currCart.filter(p=> p._id !== id);
+        localStorage.setItem("cart", JSON.stringify(currCart));
+      } else {
+        let filterCart = currCart.filter(p => p._id !== id);
         setCart(filterCart);
-        localStorage.setItem('cart', JSON.stringify(filterCart));
+        localStorage.setItem("cart", JSON.stringify(filterCart));
       }
     });
-  }
+  };
 
-  const getCartTotal = () =>{
-    let total =0;
-    cart.forEach(p => total += (p.amount * p.price));
+  const getCartTotal = () => {
+    let total = 0;
+    cart.forEach(p => (total += p.amount * p.price));
     return total;
-  }
+  };
+
+  const getCartCount = () => {
+    let total = 0;
+    cart.forEach(p => (total += p.amount));
+    return total;
+  };
 
   const clearCart = () => {
-    localStorage.clear('cart');
+    localStorage.clear("cart");
     setCart([]);
-  }
+  };
 
-  const createOrder = () =>{
+  const createOrder = () => {
     CreateOrder(cart);
   };
 
   return (
-    <CartContext.Provider value={{ cart, addProduct, createOrder, clearCart, incrementProduct, decrementProduct, getCartTotal }}>
+    <CartContext.Provider
+      value={{
+        cart,
+        addProduct,
+        createOrder,
+        clearCart,
+        incrementProduct,
+        decrementProduct,
+        getCartTotal,
+        getCartCount
+      }}
+    >
       {props.children}
     </CartContext.Provider>
   );

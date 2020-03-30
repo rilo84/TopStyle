@@ -85,6 +85,16 @@ nav{
             cursor: pointer;
             width:2rem;
         }
+        .cartCount{
+            border-radius: 50%;
+            min-width:1rem;
+            height:1rem;
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:2px;
+        }
     }
     
 }

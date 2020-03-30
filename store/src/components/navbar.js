@@ -1,28 +1,37 @@
-import React from "react";
+import React, {useContext,useEffect} from "react";
 import "../styles/navbar.css";
 import cartImg from "../images/cart.svg";
 import { NavLink } from "react-router-dom";
+import {CartContext} from '../contexts/CartContext';
 
 const Navbar = () => {
+  const {getCartCount} = useContext(CartContext);
+  let cartCount = getCartCount();
+
   return (
     <nav>
       <ul className="leftContent">
         <li>
           <NavLink to="/clothes">Kläder</NavLink>
         </li>
-        <li><NavLink to="/shoes">Skor</NavLink></li>
+        <li>
+          <NavLink to="/shoes">Skor</NavLink>
+        </li>
       </ul>
       <ul>
-          <li className="middleContent">
+        <li className="middleContent">
           <input type="text" />
           <button>Sök Produkt</button>
-          </li>
+        </li>
       </ul>
       <ul className="rightContent">
         <li className="rightItems">
           <NavLink to="/cart">
             Varukorg <img src={cartImg} alt="cart" />
           </NavLink>
+          <div className="cartCount">
+            <p>{cartCount}</p>
+          </div>
         </li>
         <li className="rightItems">
           <NavLink to="/login">Login</NavLink>
