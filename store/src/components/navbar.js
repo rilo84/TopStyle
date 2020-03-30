@@ -7,6 +7,18 @@ import {CartContext} from '../contexts/CartContext';
 const Navbar = () => {
   const {getCartCount} = useContext(CartContext);
   let cartCount = getCartCount();
+  let countElement = document.querySelector(".cartCount");
+
+  useEffect(()=>{
+    if(countElement){
+      if(cartCount > 0){
+        countElement.style.display = "flex";
+      }
+      else{
+        countElement.style.display = "none";
+      }
+    }
+  },[cartCount]);
 
   return (
     <nav>

@@ -142,13 +142,11 @@ nav .rightContent img {
 }
 
 nav .rightContent .cartCount {
+  display: none;
   border-radius: 50%;
   min-width: 1rem;
   height: 1rem;
   background-color: orange;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
