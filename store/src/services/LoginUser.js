@@ -10,8 +10,9 @@ const LoginUser = (username, password) => {
   })
   .then(res => res.json())
   .then(data => {
-    console.log("Loggade In")
+    console.log(data);
     localStorage.setItem('token', data.token);
+    window.location.href = "../mypage";
   });
 };
 

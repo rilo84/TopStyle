@@ -9,6 +9,7 @@ import ProductDetails from './ProductDetails';
 import Login from './Login';
 import OrderConfirmation from "./OrderConfirmation";
 import Register from "./Register";
+import MyPage from "./MyPage";
 
 const Main = () => {
   return (
@@ -23,6 +24,7 @@ const Main = () => {
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
       <Route path="/confirmation" component={OrderConfirmation} />
+      <Route path="/mypage" component={MyPage} />
     </Switch>
   );
 };

@@ -70,6 +70,7 @@ const CartContextProvider = props => {
   const createOrder = () => {
     CreateOrder(cart);
     window.location.href = '../confirmation';
+    localStorage.clear('cart');
   };
 
   return (
