@@ -1,4 +1,6 @@
-const LoginUser = (user) => {
+import LoginUser from "./LoginUser";
+
+const RegisterUser = (user) => {
     let uri = "http://localhost:3001/api/user/register";
   
     fetch(uri, {
@@ -10,10 +12,8 @@ const LoginUser = (user) => {
     })
     .then(res => res.json())
     .then(data => {
-      console.log(data);
-      localStorage.setItem('token', data.token);
-      window.location.href = "../mypage";
+      LoginUser(user.username, user.password);
     });
   };
   
-  export default LoginUser;
+export default RegisterUser;
