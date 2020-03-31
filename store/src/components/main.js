@@ -4,6 +4,7 @@ import Home from './Home';
 import Cart from './Cart';
 import Clothes from './Clothes';
 import Shoes from './Shoes';
+import Search from './Search';
 import ProductDetails from './ProductDetails';
 import Login from './Login';
 
@@ -13,6 +14,8 @@ const Main = () => {
       <Route exact path="/" component={Home} />
       <Route path="/cart" component={Cart} />
       <Route path="/clothes" component={Clothes} />
+      <Route exact path="/search/" component={Search} />
+      <Route path="/search/:word" component={Search} />
       <Route exact path="/shoes" component={Shoes} />
       <Route path="/shoes/:id" component={ProductDetails} />
       <Route path="/login" component={Login} />

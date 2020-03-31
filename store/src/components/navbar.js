@@ -1,4 +1,4 @@
-import React, {useContext,useEffect} from "react";
+import React, {useContext,useEffect, useState} from "react";
 import "../styles/navbar.css";
 import cartImg from "../images/cart.svg";
 import { NavLink } from "react-router-dom";
@@ -8,6 +8,8 @@ const Navbar = () => {
   const {getCartCount} = useContext(CartContext);
   let cartCount = getCartCount();
   let countElement = document.querySelector(".cartCount");
+
+  const [search, setSearch] = useState('');
 
   useEffect(()=>{
     if(countElement){
@@ -32,8 +34,8 @@ const Navbar = () => {
       </ul>
       <ul>
         <li className="middleContent">
-          <input type="text" />
-          <button>Sök Produkt</button>
+          <input type="text" onChange={(e)=>setSearch(e.target.value)}/>
+          <NavLink to={`/search/${search}`}><button>Sök Produkt</button></NavLink>
         </li>
       </ul>
       <ul className="rightContent">
