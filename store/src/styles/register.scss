@@ -1,0 +1,67 @@
+.registerContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    form{
+        border:2px solid black;
+        padding:2rem;
+        margin:2rem;
+        margin-bottom:3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .mainContent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            .leftContent{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin:1rem;
+                input{
+                    height:1.5rem;
+                    border:2px solid black;
+                    font-size: 1.2rem;
+                }
+                label{
+                    font-size: 1.2rem;
+                }
+            }
+            .rightContent{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin:1rem;
+                input{
+                    height:1.5rem;
+                    border:2px solid black;
+                    font-size: 1.2rem;
+                }
+                label{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        .buttonContainer{
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            button{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                background-color: white;
+                border:2px solid black;
+                height:2rem;
+                width:20rem;
+                margin:0.5rem;
+            }
+        }
+        
+    }
+}

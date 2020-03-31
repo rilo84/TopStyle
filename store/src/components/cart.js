@@ -1,22 +1,24 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext} from "react";
 import { CartContext } from "../contexts/CartContext";
 import "../styles/cart.css";
 
 const Cart = () => {
   const { cart, createOrder, clearCart, incrementProduct, decrementProduct, getCartTotal } = useContext(CartContext);
   let products;
-  let payButton = document.querySelector(".payButton");
-  useEffect(()=>{
-    let token = localStorage.getItem('token');
-    if(token){
-      console.log(token);
-      if(payButton) payButton.style.display = "initial";
-    }
-    else{
-      if(payButton) payButton.style.display = "none";
-    }
-  },[])
+  let button;
+  let token = localStorage.getItem('token');
 
+  if(token){
+    if(getCartTotal() === 0)
+    button = "";
+    else{
+      button = <button className="payButton" onClick={createOrder}>Betala</button>;
+    }
+  }
+  else{
+    button = <a type="Button" href="/login" className="payButton">Logga in</a>;
+  }
+  
   const handleAdd = async e => {
     await incrementProduct(e.target.id);
   }
@@ -56,8 +58,8 @@ const Cart = () => {
         <h3>Totalt {getCartTotal()} kr inkl.moms</h3>
       </div>
       <div className="cartButtonContainer">
-        <button className="payButton" onClick={createOrder}>Betala</button>
         <button onClick={clearCart}>Rensa varukorg</button>
+        {button}
       </div>
     </div>
   );

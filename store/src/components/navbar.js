@@ -20,7 +20,7 @@ const Navbar = () => {
         countElement.style.display = "none";
       }
     }
-  },[cartCount]);
+  },[cartCount,countElement]);
 
   return (
     <nav>

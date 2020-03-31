@@ -69,6 +69,7 @@ const CartContextProvider = props => {
 
   const createOrder = () => {
     CreateOrder(cart);
+    window.location.href = '../confirmation';
   };
 
   return (

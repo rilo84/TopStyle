@@ -21,7 +21,7 @@ const ProductDetails = () => {
     return (
       <div className="productContent" key={p._id}>
         <div className="imgContainer">
-          <img src={p.imagelink} />
+          <img src={p.imagelink} alt={p.name} />
         </div>
         <div className="sideBar">
           <h1>{p.name}</h1>

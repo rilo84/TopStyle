@@ -10,6 +10,7 @@ const LoginUser = (username, password) => {
   })
   .then(res => res.json())
   .then(data => {
+    console.log("Loggade In")
     localStorage.setItem('token', data.token);
   });
 };

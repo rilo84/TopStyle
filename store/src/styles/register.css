@@ -1,4 +1,4 @@
-.cartContainer {
+.registerContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6,27 +6,35 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 70vh;
 }
 
-.cartContainer .cartCard {
+.registerContainer form {
+  border: 2px solid black;
+  padding: 2rem;
+  margin: 2rem;
+  margin-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border: 2px solid black;
-  width: 40%;
-  height: 10rem;
-  margin: 0.5rem;
-  padding: 0.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.cartContainer .cartCard .amount {
+.registerContainer form .mainContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,49 +46,34 @@
           align-items: center;
 }
 
-.cartContainer .cartCard .amount h3 {
+.registerContainer form .mainContent .leftContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 1rem;
 }
 
-.cartContainer .cartCard .amount .changeAmount {
-  cursor: pointer;
+.registerContainer form .mainContent .leftContent input {
+  height: 1.5rem;
+  border: 2px solid black;
+  font-size: 1.2rem;
 }
 
-.cartContainer .cartCard .prodImage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.registerContainer form .mainContent .leftContent label {
+  font-size: 1.2rem;
 }
 
-.cartContainer .cartCard .prodImage img {
-  width: 50%;
-  max-height: 8rem;
-}
-
-.cartContainer .cartCard .details {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 30%;
-}
-
-.cartContainer .cartButtonContainer {
+.registerContainer form .mainContent .rightContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,9 +81,31 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
 }
 
-.cartContainer .cartButtonContainer button {
+.registerContainer form .mainContent .rightContent input {
+  height: 1.5rem;
+  border: 2px solid black;
+  font-size: 1.2rem;
+}
+
+.registerContainer form .mainContent .rightContent label {
+  font-size: 1.2rem;
+}
+
+.registerContainer form .buttonContainer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.registerContainer form .buttonContainer button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,25 +119,7 @@
   background-color: white;
   border: 2px solid black;
   height: 2rem;
+  width: 20rem;
   margin: 0.5rem;
 }
-
-.cartContainer .cartButtonContainer a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-  background-color: white;
-  border: 2px solid black;
-  height: 2rem;
-  margin: 0.5rem;
-  text-decoration: none;
-  color: black;
-}
-/*# sourceMappingURL=cart.css.map */
+/*# sourceMappingURL=register.css.map */

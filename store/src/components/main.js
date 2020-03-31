@@ -7,6 +7,8 @@ import Shoes from './Shoes';
 import Search from './Search';
 import ProductDetails from './ProductDetails';
 import Login from './Login';
+import OrderConfirmation from "./OrderConfirmation";
+import Register from "./Register";
 
 const Main = () => {
   return (
@@ -19,6 +21,8 @@ const Main = () => {
       <Route exact path="/shoes" component={Shoes} />
       <Route path="/product/:id" component={ProductDetails} />
       <Route path="/login" component={Login} />
+      <Route path="/register" component={Register} />
+      <Route path="/confirmation" component={OrderConfirmation} />
     </Switch>
   );
 };
