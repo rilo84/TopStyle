@@ -30,19 +30,19 @@ const Register = () => {
         <div className="mainContent">
           <div className="leftContent">
             <label>Förnamn:</label>
-            <input onChange={(e) => setFirstName(e.target.value)} type="text"></input>
+            <input onChange={(e) => setFirstName(e.target.value)} type="text" required="required" pattern=".{2,}" title="Ange minst 2 tecken"></input>
             <label>Efternamn:</label>
-            <input  onChange={(e) => setLastName(e.target.value)} type="text"></input>
+            <input  onChange={(e) => setLastName(e.target.value)} type="text" required="required" pattern=".{2,}" title="Ange minst 2 tecken"></input>
             <label>Adress:</label>
-            <input  onChange={(e) => setAdress(e.target.value)}type="text"></input>
+            <input  onChange={(e) => setAdress(e.target.value)}type="text" required="required" pattern=".{2,}" title="Ange minst 2 tecken"></input>
           </div>
           <div className="rightContent">
             <label>Email:</label>
-            <input  onChange={(e) => setEmail(e.target.value)} type="mail"></input>
+            <input  onChange={(e) => setEmail(e.target.value)} type="mail" required="required" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" title="Ange en giltig mailadress"></input>
             <label>Användarnamn:</label>
-            <input  onChange={(e) => setUsername(e.target.value)} type="username"></input>
+            <input  onChange={(e) => setUsername(e.target.value)} type="username" required="required" pattern=".{4,}" title="Ange minst 4 tecken"></input>
             <label>Lösenord:</label>
-            <input onChange={(e) => setPassword(e.target.value)} type="password"></input>
+            <input onChange={(e) => setPassword(e.target.value)} type="password" required="required" pattern=".{6,}" title="Ange minst 6 tecken"></input>
           </div>
         </div>
         <div className="buttonContainer">
