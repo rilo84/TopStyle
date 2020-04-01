@@ -136,6 +136,19 @@ nav .rightContent li a {
   color: black;
 }
 
+nav .rightContent li a p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 10rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 nav .rightContent img {
   cursor: pointer;
   width: 2rem;
@@ -154,5 +167,6 @@ nav .rightContent .cartCount {
       -ms-flex-align: center;
           align-items: center;
   padding: 2px;
+  margin-right: 1rem;
 }
 /*# sourceMappingURL=navbar.css.map */

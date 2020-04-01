@@ -17,10 +17,10 @@ const Navbar = () => {
     navLinks = (
       <>
         <li className="rightItems">
-          <a href="./" onClick={() => localStorage.clear('token')}>Loggaut</a>
+          <a href="./" onClick={() => localStorage.clear('token')}><p>Logga ut</p></a>
         </li>
         <li className="rightItems">
-          <NavLink to="/mypage">MinSida</NavLink>
+          <NavLink to="/mypage"><p>Min sida</p></NavLink>
         </li>
       </>
     );
@@ -29,10 +29,10 @@ const Navbar = () => {
     navLinks = (
       <>
         <li className="rightItems">
-          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/login"><p>Logga in</p></NavLink>
         </li>
         <li className="rightItems">
-          <NavLink to="/register">Register</NavLink>
+          <NavLink to="/register"><p>Ny kund</p></NavLink>
         </li>
       </>
     );

@@ -12,6 +12,19 @@
 }
 
 .loginContainer .loginCard {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginContainer .loginCard form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,12 +44,12 @@
   padding: 1rem;
 }
 
-.loginContainer .loginCard label {
+.loginContainer .loginCard form label {
   margin-top: 1rem;
   font-size: 1.4rem;
 }
 
-.loginContainer .loginCard input {
+.loginContainer .loginCard form input {
   height: 3rem;
   font-size: 1.5rem;
   border-style: none;
@@ -45,7 +58,7 @@
   width: 90%;
 }
 
-.loginContainer .loginCard button {
+.loginContainer .loginCard form button {
   margin-top: 2rem;
   width: 10rem;
   height: 3rem;

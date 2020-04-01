@@ -13,7 +13,7 @@ const LoginUser = (username, password) => {
     console.log(data);
     localStorage.setItem('token', data.token);
     window.location.href = "../mypage";
-  });
+  }).catch(err => alert("Felaktigt användarnamn eller lösenord"));
 };
 
 export default LoginUser;

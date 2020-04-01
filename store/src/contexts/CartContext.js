@@ -42,7 +42,7 @@ const CartContextProvider = props => {
         p.amount -= 1;
         setCart(currCart);
         localStorage.setItem("cart", JSON.stringify(currCart));
-      } else {
+      } else if(p._id === id && p.amount === 1) {
         let filterCart = currCart.filter(p => p._id !== id);
         setCart(filterCart);
         localStorage.setItem("cart", JSON.stringify(filterCart));

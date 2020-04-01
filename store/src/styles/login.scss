@@ -1,37 +1,43 @@
-.loginContainer{
-    display:flex;
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  .loginCard {
+    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    min-height:70vh;
-    .loginCard{
-        display:flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        width:20%;
-        height:15rem;
-        border:2px solid black;
-        padding:1rem;
-        label{
-            margin-top:1rem;
-            font-size: 1.4rem
-        }
-        input{
-            height:3rem;
-            font-size: 1.5rem;
-            border-style: none;
-            border:2px solid black;
-            padding-left:0.5rem;
-            width:90%;
-        }
-        button{
-            margin-top:2rem;
-            width:10rem;
-            height:3rem;
-            border:2px solid black;
-            background-color: white;
-            cursor: pointer;
-            font-size: 1.2rem;
-        }
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 20%;
+      height: 15rem;
+      border: 2px solid black;
+      padding: 1rem;
+      label {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+      }
+      input {
+        height: 3rem;
+        font-size: 1.5rem;
+        border-style: none;
+        border: 2px solid black;
+        padding-left: 0.5rem;
+        width: 90%;
+      }
+      button {
+        margin-top: 2rem;
+        width: 10rem;
+        height: 3rem;
+        border: 2px solid black;
+        background-color: white;
+        cursor: pointer;
+        font-size: 1.2rem;
+      }
     }
+  }
 }
