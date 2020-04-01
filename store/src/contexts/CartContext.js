@@ -63,14 +63,14 @@ const CartContextProvider = props => {
   };
 
   const clearCart = () => {
-    localStorage.clear("cart");
+    localStorage.removeItem("cart");
     setCart([]);
   };
 
   const createOrder = () => {
     CreateOrder(cart);
     window.location.href = '../confirmation';
-    localStorage.clear('cart');
+    clearCart();
   };
 
   return (

@@ -1,0 +1,15 @@
+.mypageContainer{
+    min-height:70vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .orderCard{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid black;
+        width:30%;
+        margin:1rem;
+    }
+}
